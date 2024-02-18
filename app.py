@@ -18,6 +18,10 @@ def index():
 def insights():
     return render_template('insights.html')
 
+@app.route('/Admin.html')
+def insights():
+    return render_template('Admin.html')
+
 @app.route('/analysis.html')
 def analysis():
     return render_template('analysis.html')
