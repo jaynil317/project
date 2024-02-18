@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
+
+    <link rel="stylesheet" href="/static/analytics.css">
+    <title>Predictive Analytics</title>
+   
+
+   </style>
+</head>
+
+<body>
+    
+    <div class="bg-image"></div>
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <h2>RecruitNex</h2>
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="Admin.html">
+                        <i class="fas fa-th-large"></i>
+                        <div >DASHBOARD</div>
+                        </a>
+                        <!-- <div class="nested"> -->
+                                
+                                <li>
+                                    <a href="/insights.html">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>COMPANY INSIGHTS</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/analysis.html">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>SALARY ANALYSIS</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/trends.html">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>PLACEMENT TRENDS</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/analytics.html">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>PREDICTIVE ANALYTICS</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/page.html">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>STUDENT PROFILE</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>FEEDBACK</div>
+                                    </a>
+                                </li>
+                    </div>
+                    </a>
+                </li>
+</div>
+<!-- main content  -->
+<div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">5000</div>
+                        <div class="card-name">Total no. of students</div>
+                        
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">4876</div>
+                        <div class="card-name">No. of students applied</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">2456</div>
+                        <div class="card-name">No. of students placed</div>
+                       
+                        
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <div class="card-content">
+                        <div class="number"></div>
+                        <div class="card-name"></div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div> -->
+            </div>
+            <div class="charts">
+                <div class="chart">
+                    <h2>Students placed per year</h2>
+                    <div>
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart doughnut-chart">
+                    <h2>Students per branch</h2>
+                    <div>
+                        <canvas id="doughnut"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="chart1.js"></script>
+    <script>
+        var data1=546;//<?=$rows?>;
+        var data2=502;//<?=$rows2?>;
+        var data3=110;//<?=$rows3?>;
+        var data4=231;//<?=$rows4?>;
+        var data5=175;//<?=$rows5?>;
+        var data6=133;//<?=$rows5?>;
+        var data7=431;//<?=$rows5?>;
+        var data8=308;//<?=$rows5?>;
+
+        var ctx2 = document.getElementById('doughnut').getContext('2d');
+        
+var myChart2 = new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+        labels: ['Computer', 'IT','Civil', 'Mechanical','Electrical','Automobile','MCA','EC'],
+
+        datasets: [{
+            label: 'Employees',
+            data: [data1, data2,data3 ,data4 ,data5,data6,data7,data8],
+            backgroundColor: [
+                'rgba(41, 155, 99, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 165, 0, 1)',
+                'rgba(120, 46, 139,1)',
+                'rgba(255, 255, 0,1)',
+                'rgba(133,244,09,1)',
+                'rgba(111,311,119,1)',
+                'rgba(255,0,0,0.5)',
+
+
+            ],
+            borderColor: [
+                'rgba(41, 155, 99, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 165, 0, 1)',
+                'rgba(120, 46, 139,1)',
+                'rgba(255, 255, 0,1)'
+
+
+
+
+            ],
+            borderWidth: 1
+        }]
+
+    },
+    options: {
+        responsive: true
+    }
+});
+    </script>
+    <!-- <script src="chart2.js"></script> -->
+</body>
+
+</html>

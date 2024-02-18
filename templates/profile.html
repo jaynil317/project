@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
+
+    <link rel="stylesheet" href="/static/profile.css">
+    <title>Student Profile</title>
+   
+
+   </style>
+</head>
+
+<body>
+    
+    <div class="bg-image"></div>
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <h2>RecruitNex</h2>
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="Admin.html">
+                        <i class="fas fa-th-large"></i>
+                        <div >DASHBOARD</div>
+                        </a>
+                        <!-- <div class="nested"> -->
+                                
+                                <li>
+                                    <a href="{{url_for('insights')}}">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>COMPANY INSIGHTS</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{url_for('analysis')}}">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>SALARY ANALYSIS</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{url_for('trends')}}">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>PLACEMENT TRENDS</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{url_for('analytics')}}">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>PREDICTIVE ANALYTICS</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{url_for('page')}}">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>STUDENT PROFILE</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <div>FEEDBACK</div>
+                                    </a>
+                                </li>
+                    </div>
+                    </a>
+                </li>
+</div>
+ <div class="main">
+    <div class="bg-image"></div>
+        <form id="placementForm">
+            <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;"><center>Personal Details</center></h2><br>
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo">
+        
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+        
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+        
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required><br><br>
+        
+            <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;"><center>Academic Details</center></h2><br>
+            <label for="tenthPercentage">10th Percentage:</label>
+            <input type="number" id="tenthPercentage" name="tenthPercentage" step="0.01" required>
+        
+            <label for="twelfthPercentage">12th Percentage:</label>
+            <input type="number" id="twelfthPercentage" name="twelfthPercentage" step="0.01" required>
+        
+            <label for="program">Program:</label>
+            <select id="program" name="program">
+              <option value="Bachelors">Bachelors</option>
+              <option value="Masters">Masters</option>
+              
+            </select>
+            
+            <label for="graduationCourse">Graduation Course:</label>
+            <input type="text" id="graduationCourse" name="graduationCourse" required>
+
+            <label for="yearOfPassing">Enrollment number</label>
+            <input type="number" id="Enrollment number" name="yearOfPassing" required>
+        
+            <label for="institute">Institute:</label>
+            <input type="text" id="institute" name="institute" required>
+        
+            <label for="yearOfPassing">Year of Passing:</label>
+            <input type="number" id="yearOfPassing" name="yearOfPassing" required>
+        
+            <label for="averageGPA">Average GPA:</label>
+            <input type="number" id="averageGPA" name="averageGPA" step="0.01" required><br><br>
+        
+            <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;"><center>Skills</center></h2><br>
+            <label for="technicalSkills">Technical Skills:</label>
+            <textarea id="technicalSkills" name="technicalSkills" rows="3"></textarea>
+        
+            <label for="nonTechnicalSkills">Non-Technical Skills:</label>
+            <textarea id="nonTechnicalSkills" name="nonTechnicalSkills" rows="3"></textarea><br><br>
+        
+            <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;"><center>Internships and Projects</center></h2><br>
+            <label for="internships">Mention the Internships you have done(if any):</label>
+            <textarea id="internships" name="internships" rows="5" cols="30"></textarea>
+        
+            <label for="projects">Mention the Projects you have worked on(if any) and  brief about them:</label>
+            <textarea id="projects" name="projects" rows="5" cols="30"></textarea><br><br>
+        
+            <button type="button" onclick="submitForm()">Submit</button>
+          </form>
+        
+          <script>
+            function submitForm() {
+              // Perform any additional validation or processing here
+              // For simplicity, we'll just alert the serialized form data
+              const formData = new FormData(document.getElementById('placementForm'));
+              let serializedData = '';
+              for (const [key, value] of formData.entries()) {
+                serializedData += `${key}: ${value}\n`;
+              }
+              alert(serializedData);
+            }
+          </script>
+          </div>
+        </div> 
+        
+</body>
+
+</html>

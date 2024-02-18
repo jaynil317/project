@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Analysis</title>
+    <style>
+        body {
+            font-family: "Space Mono", monospace;
+            background-color: #f5f5f5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 20px;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .header a:hover {
+            color: #ddd;
+        }
+        .header h1 {
+            color: white;
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .content h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content .faq {
+            margin-top: 50px;
+        }
+        .content .faq h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .content .faq p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .p1{
+            text-align: left;
+        }
+        .image-container {
+      height: 300px; 
+      text-align: center; 
+    }
+
+    .image-container img {
+      vertical-align: top; 
+      max-height: 100%; 
+    }
+    #div{
+    max-width: 25%;
+    max-height:15%;
+    float: left;
+  }
+  
+  .text {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 20%;
+    float: left;
+  }
+  
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>RecruitNex</h1>
+        <nav>
+            
+            <a href="login">Login</a>
+            <a href="signup">Signup</a>
+        </nav>
+    </div>
+    <div class="content">
+        <h1 style="font-size:60px;">RecruitNex</h1>
+        <p style="font-size:23px">Welcome to the ultimate placement analysis platform! Uncover mind-blowing insights and trends about student placements and recruiters while navigating the awesome world of academia.
+
+        </p><hr>
+        <img src="/static/1.png" alt="Placement Related Image"><br>
+
+        <div>
+
+        <h2 style="font-size:50px">Exploration of Campus Placement</h2><br>
+        <p style="text-align: left; font-size:18px;">Dive into the vast world of campus placement data, encompassing student <br>performance, skills, internships, and final outcomes. Unravel the mysteries<br> hiding beneath the surface and understand the recipe for success!
+            <br>Turning raw data into powerful insights using cutting-edge machine learning <br>algorithms, we reveal the driving forces behind the placement process and its <br>success stories. Brace yourselves for a roller-coaster ride of in-depth analysis.
+           <br> Our goal is to offer actionable strategies to improve placement processes in<br> educational institutions across the globe. Welcome to the future, where placement <br>success is as predictable as the rising sun. </p1>
+        <img align="right" src="/static/3.png" style="border-radius: 25%" width="350" height="390"  draggable="true" ondragstart="drag(event)"  ><br><br></div>
+            
+           
+
+            <br><br><br><h2  style="font-size:50px;" >Learn how Analytics is Revolutionizing Placement Outcomes</h2>
+            <p style="text-align: left; font-size:18px;">Witness how the power of data is transforming the campus placement landscape by<br> providing clear guidance to students, educators, and recruiters.</p><br><br>
+            
+        
+                      <img  class="img_class" src="/static/77.png">
+    
+            <img align="left" src="/static/2.png" style="border-radius: 25%" alt=""  width="350" height="390" hspace="50"><br><br>
+            <h2 style="font-size:50px;" >Unlock the Hidden Potential of your Institution</h2>
+            
+            <p style="font-size:22px">Empower your institution to thrive by identifying patterns and trends that drive placement success.</p><br><br><br>
+            <div class="faq">
+            <h3 style="font-size:50px; text-align: center;">Frequently Asked Questions</h3>
+            <p style=" font-size:18px;"><h4>How can I access the placement data?</h4><br>
+                Our platform offers secure access to anonymized campus placement data. Simply sign up and join the revolution!</p><br>
+            <p style=" font-size:18px;"><h4>What insights can I expect from this data?</h4><br>
+                Our platform analyzes student demographics, academic performance, skill sets, internship experiences, companies, and final placement outcomes to unveil the factors influencing placement success.</p><br><br>
+                <h2 style="font-size:50px; text-align: center;">Get Started</h2><br>
+                <p style="text-align: center; font-size:18px;"><center>Ready to tap into the world of campus placement insights and fuel your institution’s success? It's time to turbocharge your placement strategies!</center></p>
+        
+    <script> 
+        function allowDrop(ev) { 
+            ev.preventDefault(); 
+        } 
+  
+        function drag(ev) { 
+            ev.dataTransfer.setData("text", ev.target.id); 
+        } 
+  
+        function drop(ev) { 
+            ev.preventDefault(); 
+            var data = ev.dataTransfer.getData("text"); 
+            ev.target.appendChild(document.getElementById(data)); 
+        } 
+    </script> 
+</body>
+</html>
