@@ -19,7 +19,7 @@ def insights():
     return render_template('insights.html')
 
 @app.route('/Admin.html')
-def insights():
+def Admin():
     return render_template('Admin.html')
 
 @app.route('/analysis.html')
