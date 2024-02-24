@@ -1,6 +1,11 @@
 from flask import Flask,render_template, redirect, url_for, session, flash,request
 from flask_wtf import FlaskForm
-
+import pickle
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
+from sklearn.metrics import confusion_matrix
 import bcrypt
 from flask_mysqldb import MySQL
 import mysql.connector
@@ -26,8 +31,23 @@ def Admin():
 def analysis():
     return render_template('analysis.html')
 
-@app.route('/analytics.html')
+@app.route('/analytics.html',methods=["GET","POST"])
 def analytics():
+    result=""
+    if (request.method=="POST"):       
+        cpi=request.form['cpi']
+        projects=request.form['projects']
+        hackathon=request.form['hackathon']
+        skills=request.form['skills']
+        branch=request.form['branch']
+        gender=request.form['gender']
+        
+
+# Load the model from the .pkl file
+        with open('svc.pkl', 'rb') as file:
+            loaded_model = pickle.load(file)
+        result=loaded_model.predict(np.array([[cpi,projects,hackathon,skills,branch,gender]]))
+        return render_template('analytics.html',result=result)
     return render_template('analytics.html')
 
 @app.route('/page.html')

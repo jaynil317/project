@@ -74,119 +74,36 @@
 </div>
 <!-- main content  -->
 <div class="main">
-            <div class="cards">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="number">5000</div>
-                        <div class="card-name">Total no. of students</div>
-                        
-                    </div>
-                    <div class="icon-box">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <div class="number">4876</div>
-                        <div class="card-name">No. of students applied</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <div class="number">2456</div>
-                        <div class="card-name">No. of students placed</div>
-                       
-                        
-                    </div>
-                    <div class="icon-box">
-                        <i class="fas fa-users"></i>
-                    </div>
-                </div>
-                <!-- <div class="card">
-                    <div class="card-content">
-                        <div class="number"></div>
-                        <div class="card-name"></div>
-                    </div>
-                    <div class="icon-box">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                </div> -->
-            </div>
-            <div class="charts">
-                <div class="chart">
-                    <h2>Students placed per year</h2>
-                    <div>
-                        <canvas id="lineChart"></canvas>
-                    </div>
-                </div>
-                <div class="chart doughnut-chart">
-                    <h2>Students per branch</h2>
-                    <div>
-                        <canvas id="doughnut"></canvas>
-                    </div>
-                </div>
-            </div>
+    <div class="details form">
+        <header>enter the details</header>
+        <form action="/analytics.html" method="POST">
+         
+          <input type="text" name=cpi id=cpi placeholder="CPI ( As per your last declare result )">
+          <input type="text" name=projects id=projects placeholder="internships/no_of_projects">
+          <input type="text" name=hackathon id=hackathon placeholder="no_of_hackathons">
+          <input type="text" name=skills id=skills placeholder="skills">
+          <input type="text" name=branch id=branch placeholder="Specialization/Branch">
+          <input type="text" name=gender id=gender placeholder="Gender">
+          
+          <input type="submit" class="button" value="submit">
+        </form>
+
+        <div>
+            <header> 
+                {% if(result == 1) %} 
+                    <h3>you are placed</h3> 
+                {% elif(result == 0) %} 
+                    <h3> you are not placed </h3> 
+                {% else %} 
+                    <h3> wait</h3> 
+                {% endif %} 
+            </header>
         </div>
+       
+      </div>      
     </div>
      
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
-    <script src="chart1.js"></script>
-    <script>
-        var data1=546;//<?=$rows?>;
-        var data2=502;//<?=$rows2?>;
-        var data3=110;//<?=$rows3?>;
-        var data4=231;//<?=$rows4?>;
-        var data5=175;//<?=$rows5?>;
-        var data6=133;//<?=$rows5?>;
-        var data7=431;//<?=$rows5?>;
-        var data8=308;//<?=$rows5?>;
-
-        var ctx2 = document.getElementById('doughnut').getContext('2d');
-        
-var myChart2 = new Chart(ctx2, {
-    type: 'doughnut',
-    data: {
-        labels: ['Computer', 'IT','Civil', 'Mechanical','Electrical','Automobile','MCA','EC'],
-
-        datasets: [{
-            label: 'Employees',
-            data: [data1, data2,data3 ,data4 ,data5,data6,data7,data8],
-            backgroundColor: [
-                'rgba(41, 155, 99, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 165, 0, 1)',
-                'rgba(120, 46, 139,1)',
-                'rgba(255, 255, 0,1)',
-                'rgba(133,244,09,1)',
-                'rgba(111,311,119,1)',
-                'rgba(255,0,0,0.5)',
-
-
-            ],
-            borderColor: [
-                'rgba(41, 155, 99, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 165, 0, 1)',
-                'rgba(120, 46, 139,1)',
-                'rgba(255, 255, 0,1)'
-
-
-
-
-            ],
-            borderWidth: 1
-        }]
-
-    },
-    options: {
-        responsive: true
-    }
-});
-    </script>
-    <!-- <script src="chart2.js"></script> -->
+   
 </body>
 
 </html>
