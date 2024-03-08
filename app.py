@@ -13,6 +13,8 @@ import mysql.connector
 app=Flask(__name__)
 conn=mysql.connector.connect(host="localhost",user="root",password="jaynil",database="mydatabase")
 cursor = conn.cursor()
+conn1=mysql.connector.connect(host="localhost",user="root",password="jaynil",database="feedback")
+cursor1=conn1.cursor()
 
 #pages connection
 @app.route('/')
@@ -27,8 +29,27 @@ def insights():
 def Admin():
     return render_template('Admin.html')
 
-@app.route('/feedback.html')
+@app.route('/feedback.html',methods=["GET","POST"])
 def feedback():
+    
+    if (request.method=="POST"):
+        
+        name=request.form['name']
+        email=request.form['email']
+        textarea=request.form['message']
+       
+      
+    # store data into database  
+        cursor1.execute("INSERT INTO users (name,emaill,message) VALUES (%s,%s,%s)",(name,email,textarea))
+        
+        
+        conn1.commit()
+        cursor1.close()
+        conn1.close()
+       
+        return redirect(url_for('feedback'))
+
+
     return render_template('feedback.html')
 
 @app.route('/analysis.html')
