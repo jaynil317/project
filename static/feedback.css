@@ -8,17 +8,17 @@
 
 .topbar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    width: 100%;
+    padding: 0 20px;
     height: 60px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 10fr 0.4fr 1fr;
     align-items: center;
-    justify-content: space-between; /* Align logo and user icon at opposite ends */
-    z-index: 3; /* Ensure the topbar is above the sidebar */
+    z-index: 1;
 }
+
 
 
 .fa-bell {
@@ -34,33 +34,16 @@
 
 
 /* sidebar */
+
 .sidebar {
     position: fixed;
     top: 60px;
-    left: 0; /* Adjusted to be on the left side */
     width: 260px;
     height: calc(100% - 60px);
     background: #575a4da0;
     overflow-x: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     z-index: 2;
-    display: flex;
-    flex-direction: column;
-}
-.logo {
-    background-color: #fff; /* Background color for the logo */
-    padding: 20px;
-    text-align: center;
-    color: #000; /* Text color for the logo */
-}
-
-.logo h2 {
-    margin: 0;
-    font-size: 1.5em; /* Adjust font size as needed */
-}
-
-.container .sidebar .nested {
-    margin-top: -12em;
 }
 
 .sidebar ul {
@@ -97,34 +80,54 @@
 .container .sidebar .nested {
     margin-top: -12em;
 }
-.container {
-    margin-left: 260px; /* Adjusted to give space for the sidebar */
-    padding-top: 60px;
+/* Feedback Form Styling */
+.feedback-form-container {
+    background-color: #fff; /* Background of the form */
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 8px;
 }
 
-.card {
-    /* width: 300px; */
-    width: calc(75% - 45px);
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+.feedback-form-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
-.card img {
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.card-content {
-    padding: 20px;
+.submit-btn:hover {
+    background-color: #45a049;
 }
 
-.card-content h3 {
-    margin-bottom: 10px;
-}
-
-.card-content p {
-    margin-bottom: 5px;
-}

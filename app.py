@@ -27,6 +27,10 @@ def insights():
 def Admin():
     return render_template('Admin.html')
 
+@app.route('/feedback.html')
+def feedback():
+    return render_template('feedback.html')
+
 @app.route('/analysis.html')
 def analysis():
     return render_template('analysis.html')
