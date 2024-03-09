@@ -100,7 +100,7 @@ def predict():
 def login():
     message=''
     if (request.method=='POST'):
-        cursor = conn.cursor()
+        #cursor = conn.cursor()
         email1=request.form['email']
         password1=request.form['password']
         cursor.execute('SELECT * FROM users WHERE email = %s AND password = %s', (email1, password1, ))
