@@ -156,26 +156,50 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">INTERNSHIPS/NO. OF PROJECTS</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" name="projects" placeholder="internships/no_of_projects">
+              <input type="password" class="form-control" id="exampleInputPassword1" name="projects" placeholder="internships/no_of_projects in number">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">NO. OF HACKATHONS</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name=hackathon placeholder="no_of_hackathons">
+                <input type="text" class="form-control" id="exampleInputEmail1" name=hackathon placeholder="no_of_hackathons in number">
                 
             </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">SKILLS</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name=skills placeholder="skills">
+                <input type="text" class="form-control" id="exampleInputEmail1" name=skills placeholder="skills in number">
                
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">SPECIALIZATION/BRANCH</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name=branch placeholder="Specialization/Branch">
+                <label for="exampleInputEmail1">SPECIALIZATION/BRANCH:</label><br>
+                <!-- <input type="text" class="form-control" id="exampleInputEmail1" name=branch placeholder="Specialization/Branch"> -->
+                <input type="radio" id="null" name="branch" value="0">
+                <label for="null">null</label>
+                <input type="radio" id="Electronics And Comm." name="branch" value="1">
+                <label for="Electronics And Comm.">Electronics And Comm.</label>
+                <input type="radio" id="Computer" name="branch" value="2">
+                <label for="Computer">Computer</label>
+                <input type="radio" id="Information and Technology" name="branch" value="3">
+                <label for="Information and Technology">Information and Technology</label>
+                <input type="radio" id="Mechanical" name="branch" value="4">
+                <label for="Mechanical">Mechanical</label>
+                <input type="radio" id="Electrical" name="branch" value="5">
+                <label for="Electrical">Electrical</label>
+                <input type="radio" id="Civil" name="branch" value="6">
+                <label for="Civil">Civil</label>
+                <input type="radio" id="MCA" name="branch" value="7">
+                <label for="MCA">MCA</label>
+                <input type="radio" id="Automobile" name="branch" value="8">
+                <label for="Automobile">Automobile</label>
+                
                 
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">GENDER</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name=gender placeholder="Gender">
+                <label for="exampleInputEmail1">GENDER:</label><br>
+                <input type="radio" id="male" name="gender" value="1">
+                <label for="male">MALE</label>
+                <input type="radio" id="female" name="gender" value="0">
+                <label for="female">Female</label><br>
+                <!-- <label for="exampleInputEmail1">GENDER</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name=gender placeholder="Gender"> -->
                
             </div>
            
@@ -185,9 +209,9 @@
         <div>
             <header> 
                 {% if(result == 1) %} 
-                    <h3>you are placed</h3> 
+                    <h3>your chances to be placed is high</h3> 
                 {% elif(result == 0) %} 
-                    <h3> you are not placed </h3> 
+                    <h3> your chances to be placed is low </h3> 
                 {% else %} 
                     <h3> wait</h3> 
                 {% endif %} 

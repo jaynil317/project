@@ -66,12 +66,16 @@ def analytics():
         skills=request.form['skills']
         branch=request.form['branch']
         gender=request.form['gender']
+        if(gender=="1"):
+            gender1=1
+        else:
+            gender1=0    
         
 
 # Load the model from the .pkl file
         with open('svc.pkl', 'rb') as file:
             loaded_model = pickle.load(file)
-        result=loaded_model.predict(np.array([[cpi,projects,hackathon,skills,branch,gender]]))
+        result=loaded_model.predict(np.array([[cpi,projects,hackathon,skills,branch,gender1]]))
         return render_template('analytics.html',result=result)
     return render_template('analytics.html')
 
