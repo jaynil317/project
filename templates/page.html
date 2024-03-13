@@ -65,12 +65,21 @@
           <div class="card">
               <div class="card-header">
                   <img src="/static/student image.png" alt="Student DP" style="max-width: 100px; max-height: 100px;">
-                  <h3><centre>Maitri Shah</centre></h3>
+                  {% for names in name %} 
+                  <h3><centre>{{names}}</centre></h3>
+                  {% endfor %} 
+                  
               </div>
               <div class="card-content">
-                  <p><strong>Enrollment Number:</strong> 21BEI30122</p><br>
-                  <p><strong>Program:</strong> Bachelors</p><br>
-                  <p><strong>Graduation Course:</strong> IT</p><br>
+                  {% for enrolls in enroll %} 
+                  <p><strong>Enrollment Number:</strong> {{enrolls}}</p><br>
+                  {% endfor %} 
+                  {% for programs in program %} 
+                  <p><strong>Program:</strong> {{programs}}<br>
+                  {% endfor %}
+                  {% for courses in course %}  
+                  <p><strong>Graduation Course:</strong> {{courses}}</p><br>
+                  {% endfor %}
               </div>
           </div>
           <div class="card-content">
@@ -82,10 +91,12 @@
                   <!-- General Information Table -->
                   <table class="table table-bordered">
                       <tr>
-
-                        <th width="30%">Gender</th>
+                        
+                        <th width="30%">Gender</th>                       
                         <td width="2%">:</td>
-                        <td>Female</td>
+                        {% for genders in gender %} 
+                        <td>{{genders}}</td>
+                        {% endfor %}
                       </tr><br>
                       <tr>
                         <td>
@@ -95,7 +106,9 @@
                       <tr>
                         <th width="30%">Email</th>
                         <td width="2%">:</td>
-                        <td>maitrishah49@gmail.com</td>
+                        {% for emails in email %} 
+                        <td>{{emails}}</td>
+                        {% endfor %}
                         </tr>
                         <tr>
                           <td>
@@ -105,7 +118,9 @@
                       <tr>
                         <th width="30%">Phone number</th>
                         <td width="2%">:</td>
-                        <td>7443212132</td>
+                        {% for phones in phone %} 
+                        <td>{{phones}}</td>
+                        {% endfor %}
                       </tr>
                       <tr>
                         <td>
@@ -116,7 +131,9 @@
                       <tr>
                           <th width="30%">Date of Birth</th>
                           <td width="2%">:</td>
-                          <td>01-01-2000</td>
+                          {% for dobs in dob %} 
+                          <td>{{dobs}}</td>
+                          {% endfor %}
                         </tr>
                         <tr>
                           <td>
@@ -126,7 +143,9 @@
                         <tr>
                           <th width="30%">Address</th>
                           <td width="2%">:</td>
-                          <td>ABC</td>
+                          {% for addresss in address %} 
+                          <td>{{addresss}}</td>
+                          {% endfor %}
                         </tr>
                         <tr>
                           <td>
@@ -136,7 +155,10 @@
                         <tr>
                           <th width="30%">City</th>
                           <td width="2%">:</td>
-                          <td>Ahmedabad</td>
+                          {% for citys in city %} 
+                          <td>{{citys}}</td>
+                          {% endfor %}
+                          
                         </tr>
                         <tr>
                           <td>
@@ -145,8 +167,10 @@
                         </tr>
                         <tr>
                           <th width="30%">State</th>
-<td width="2%">:</td>
-                          <td>Gujrat</td>
+                          <td width="2%">:</td>
+                          {% for states in state %} 
+                          <td>{{states}}</td>
+                          {% endfor %}
                         </tr>
                         <tr>
                           <td>
@@ -166,7 +190,9 @@
                         <tr>
                           <th width="30%">10th Percentage</th>
                           <td width="2%">:</td>
-                          <td>89%</td>
+                          {% for tenths in tenth %} 
+                          <td>{{tenths}}%</td>
+                          {% endfor %}
                         </tr><br>
                         <tr>
                           <td>
@@ -176,7 +202,9 @@
                         <tr>
                           <th width="30%">12th Percentage</th>
                           <td width="2%">:</td>
-                          <td>81%</td>
+                          {% for twelfths in twelfth %} 
+                          <td>{{twelfths}}%</td>
+                          {% endfor %}
                         </tr>
                         <tr>
                           <td>
@@ -193,30 +221,14 @@
     &nbsp;
   </td>
 </tr>
-                        <tr>
-                          <th width="30%">Program</th>
-                          <td width="2%">:</td>
-                          <td>Bachelors</td>
-                        </tr>
-                        <tr>
-                          <td>
-                            &nbsp;
-                          </td>
-                        </tr>
-                        <tr>
-                          <th width="30%">Enrollment number</th>
-                          <td width="2%">:</td>
-                          <td>21BEIT30122</td>
-                        </tr>
-                        <tr>
-                          <td>
-                            &nbsp;
-                          </td>
-                        </tr>
+                      
+                      
                         <tr>
                             <th width="30%">Year of Passing</th>
                             <td width="2%">:</td>
-                            <td>2025</td>
+                            {% for years in year %} 
+                            <td>{{years}}</td>
+                            {% endfor %}
                           </tr>
                           <tr>
                             <td>
@@ -226,7 +238,10 @@
                           <tr>
                             <th width="30%">Average GPA</th>
                             <td width="2%">:</td>
-                            <td>8.11</td>
+                            {% for avggpas in avggpa %} 
+                            <td>{{avggpas}}</td>
+                            {% endfor %}
+                          </tr>
                           </tr>
                           <tr>
                             <td>
@@ -236,7 +251,9 @@
                           <tr>
                             <th width="30%">Institute</th>
                             <td width="2%">:</td>
-                            <td>LDRP Institute of Technology and Research</td>
+                            {% for institutes in institute %} 
+                            <td>{{institutes }}</td>
+                            {% endfor %}
                           </tr>
                           <tr>
                             <td>
@@ -246,13 +263,13 @@
                       </table>
               </div>
           </div>
-          <!-- Academic Details Card -->
+          <!-- Academic Details Card
           <div class="card shadow-sm">
               <div class="card-header bg-transparent border-0">
 <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Academic Details</h3>
               </div>
               <div class="card-body pt-0">
-                  <!-- Academic Details Table -->
+                  Academic Details Table 
                   <table class="table table-bordered">
                       <tr>
                         <th width="30%">10th Percentage</th>
@@ -336,7 +353,7 @@
                         </tr>
                     </table>
               </div>
-          </div>
+          </div> -->
           <!-- Skills Card -->
           <div class="card shadow-sm">
               <div class="card-header bg-transparent border-0">
@@ -348,7 +365,9 @@
                       <tr>
                         <th width="30%">Technical Skills</th>
                         <td width="2%">:</td>
-                        <td>1. Web - Frontend (HTML,CSS,JS)<br> 2. Languages - C,C++,Java</td>
+                            {% for teckskillss in teckskills %} 
+                            <td>{{teckskillss }}</td>
+                            {% endfor %}
                       </tr><br>
                       <tr>
                         <td>
@@ -358,8 +377,10 @@
                       <tr>
                         <th width="30%">Non-Technical Skills</th>
 
-<td width="2%">:</td>
-                        <td>1. Communication skills <br> 2. Leadership<br>3. Problem solving</td>
+                        <td width="2%">:</td>
+                            {% for nontechskillss in nontechskills %} 
+                            <td>{{nontechskillss }}</td>
+                            {% endfor %}
                       </tr>
                       <tr>
                         <td>
@@ -380,7 +401,9 @@
                       <tr>
                         <th width="30%">Internships</th>
                         <td width="2%">:</td>
-                        <td>ABC</td>
+                        {% for internshipss in internships %} 
+                        <td>{{internshipss }}</td>
+                        {% endfor %}
                       </tr><br>
                       <tr>
                         <td>
@@ -390,7 +413,9 @@
                       <tr>
                         <th width="30%">Projects</th>
                         <td width="2%">:</td>
-                        <td>XYZ</td>
+                        {% for projectss in projects %} 
+                        <td>{{projectss }}</td>
+                        {% endfor %}
                       </tr>
                       <tr>
                         <td>
