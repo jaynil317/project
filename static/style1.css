@@ -85,23 +85,23 @@
 .main {
     position: absolute;
     top: 60px;
-    width: calc(100% - 260px);
+    width: calc(100% - 3000px);
     min-height: calc(100vh - 60px);
     left: 260px;
     background: #f5f5f5;
 }
 
 .cards {
-    width: 100%;
-    padding: 35px 20px;
+    width: 200%;
+    padding: 25px 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
 }
 
 .cards .card {
-    padding: 2px;
-    width:325px;
+    padding: 0.5px;
+    width:500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
